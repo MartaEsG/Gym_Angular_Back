@@ -3,6 +3,19 @@ const Class = require("../models/class.models")
 const getClass = async (req, res) => {
     
     try {
+        return res.status(200).json({
+            "_id": "64dcea42fa9425dd2b858f03",
+            "name": "Jose",
+            "age": 50,
+            "email": "Jose@diseñador.com",
+            "password": "Jose1234!",
+            "courses": [
+              "64c0f53c42bdfc4ee08a7948",
+              "64c0f53c42bdfc4ee08a7949"
+            ],
+            "role": "admin",
+            "__v": 0
+          });
       const allClass = await Class.find();
       return res.status(200).json(allClass);
     } catch (error) {
